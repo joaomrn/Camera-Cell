@@ -837,9 +837,21 @@ module.exports = webpackAsyncContext;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"./camera/camera.module": [
+		"./src/app/camera/camera.module.ts",
+		"camera-camera-module"
+	],
 	"./home/home.module": [
 		"./src/app/home/home.module.ts",
 		"home-home-module"
+	],
+	"./login/login.module": [
+		"./src/app/login/login.module.ts",
+		"login-login-module"
+	],
+	"./principal/principal.module": [
+		"./src/app/principal/principal.module.ts",
+		"principal-principal-module"
 	]
 };
 function webpackAsyncContext(req) {
@@ -881,8 +893,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: '', redirectTo: 'login', pathMatch: 'full' },
+    { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
     { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+    { path: 'principal', loadChildren: './principal/principal.module#PrincipalPageModule' },
+    { path: 'camera', loadChildren: './camera/camera.module#CameraPageModule' },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -983,6 +998,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ionic-native/camera/ngx */ "./node_modules/@ionic-native/camera/ngx/index.js");
+/* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
+
 
 
 
@@ -1005,7 +1022,8 @@ var AppModule = /** @class */ (function () {
                 _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
                 _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],
                 _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_9__["Camera"],
-                { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] }
+                { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] },
+                _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_10__["Geolocation"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
         })

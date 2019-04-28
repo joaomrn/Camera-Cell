@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Minha Camera
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="img-fluid">
+    <img class="img_candidato img_perfil circulo" [src]="photo" />
+
+  </div>
+  <div *ngIf="f" #map id="map" class="img-fluid img_candidato img_perfil" ></div>
+</ion-content>
+
+<ion-footer>
+    <ion-button expand="block" (click)="takePicture()">Confirmar</ion-button>
+    <ion-button expand="block" (click)="cleanPhoto()">Cancelar</ion-button>
+</ion-footer>

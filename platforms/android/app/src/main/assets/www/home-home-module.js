@@ -57,7 +57,7 @@ var HomePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Minha Camera\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n    <ion-content padding>\n      <div class=\"imagem\">\n        <img src=\"{{photo}}\" />\n      </div>\n    </ion-content>\n\n<ion-footer class=\"ion-footer\" padding>\n  <button type=\"button\" class=\"btn btn-success button\" (click)=\"takePicture()\">Câmera</button>\n  <button type=\"button\" class=\"btn btn-warning button\" (click)=\"cleanPhoto()\">Limpar</button>\n</ion-footer>"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Minha Camera\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n    <ion-content padding>\n      <div class=\"imagem\">\n        <img [src]=\"photo\" />\n      </div>\n    </ion-content>\n\n<ion-footer class=\"ion-footer\" padding>\n  <button type=\"button\" class=\"btn btn-success button\" (click)=\"takePicture()\">Câmera</button>\n  <button type=\"button\" class=\"btn btn-warning button\" (click)=\"cleanPhoto()\">Limpar</button>\n</ion-footer>"
 
 /***/ }),
 
