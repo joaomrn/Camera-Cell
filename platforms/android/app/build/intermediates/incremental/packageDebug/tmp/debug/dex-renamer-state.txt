@@ -1,4 +1,4 @@
-#Sat Apr 27 13:35:32 GMT-03:00 2019
+#Mon May 20 18:50:01 GMT-03:00 2019
 base.0=C\:\\_Projetos\\meu ponto\\app2\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

@@ -6,16 +6,22 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
 
-  <div class="img-fluid">
-    <img class="img_candidato img_perfil circulo" [src]="photo" />
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card" style="border: transparent">
+        <img class="card-img-top circulo" [src]="photo" (click)="takePicture()">
 
+      </div>
+    </div>
   </div>
-  <div *ngIf="f" #map id="map" class="img-fluid img_candidato img_perfil" ></div>
+
+  <div id="map" class="img-fluid img_perfil"></div>
+
 </ion-content>
 
 <ion-footer>
-    <ion-button expand="block" (click)="takePicture()">Confirmar</ion-button>
-    <ion-button expand="block" (click)="cleanPhoto()">Cancelar</ion-button>
+  <ion-button expand="block" (click)="confirmar()">Confirmar</ion-button>
+  <ion-button expand="block" (click)="cleanPhoto()">Cancelar</ion-button>
 </ion-footer>
